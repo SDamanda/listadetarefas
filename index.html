@@ -45,17 +45,17 @@
         <button onclick="adicionar()">add</button>
     </div>
     <script>
-
         function adicionar() {
             const ul = document.querySelector("ul")
             const input = document.querySelector("input")
             const tarefa = input.value
-            const li = document.creatElement("li")
-
+            
+            const li = document.createElement("li")
             li.innerText = tarefa
             ul.appendChild(li)
 
             input.value = ""
+
         }
     </script>
 </body>
