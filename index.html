@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista de tarefas</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: auto;
+            background-color: rgb(226, 134, 172);
+            height: 100vh;
+            display: grid;
+            place-items: center;
+
+
+        }
+
+        .box {
+            background-color: rgb(224, 125, 183);
+            display: grid;
+            border-radius: 5%;
+            padding: 20% 10%;
+            justify-content: center;
+            color: white;
+            gap: 30px;
+            margin: 20px;
+            font-size: 1.6rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1>tarefas</h1>
+        <ul>
+            <li>estudar</li>
+        </ul>
+        <input>
+        <button onclick="adicionar()">add</button>
+    </div>
+    <script>
+
+        function adicionar() {
+            const ul = document.querySelector("ul")
+            const input = document.querySelector("input")
+            const tarefa = input.value
+            const li = document.creatElement("li")
+
+            li.innerText = tarefa
+            ul.appendChild(li)
+
+            input.value = ""
+        }
+    </script>
+</body>
+
+</html>
